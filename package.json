@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-hbjyks",
+  "version": "1.0.0",
+  "description": "cordova-plugin-hbjyks.",
+  "cordova": {
+    "id": "cordova-plugin-hbjyks",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoLSN/cordova-plugin-android-permission.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=5.0.0"
+    }
+  ],
+  "author": "zhangjianying",
+  "license": "BSD"
+}

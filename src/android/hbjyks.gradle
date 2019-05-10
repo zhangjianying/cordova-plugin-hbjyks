@@ -1,0 +1,56 @@
+def minSdkVersion = 19
+
+if(cdvMinSdkVersion == null) {
+    ext.cdvMinSdkVersion = minSdkVersion;
+} else if (cdvMinSdkVersion.toInteger() < minSdkVersion) {
+    ext.cdvMinSdkVersion = minSdkVersion;
+}
+
+repositories{
+    jcenter()
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+
+
+dependencies {
+    compile(name:'hbjyks', ext:'aar')
+    compile(name:'videoplayer', ext:'aar')
+    //  implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:26.0.0'
+    // implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    // testImplementation 'junit:junit:4.12'
+    // androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    // androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // implementation project(path: ':jiaozivideoplayer')
+
+}
+
+// configurations.all {
+//     resolutionStrategy.force 'com.android.support:support-v4:27.0.0'
+// }
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+	defaultConfig {
+        targetSdkVersion 28
+        //  jackOptions{
+        //     enabled = true
+        // }
+   }
+
+
+    //添加如下代码
+    compileOptions{
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}

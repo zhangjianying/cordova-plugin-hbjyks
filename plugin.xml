@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.zsoftware.hbjyksplugin" version="1.0.0"
+xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>湖北考试视频组件</name>
+    <js-module name="HbjyksPlugin" src="www/HbjyksPlugin.js">
+        <clobbers target="HbjyksPlugin" />
+    </js-module>
+
+ 		<name>湖北考试视频组件</name>
+    <description>
+        湖北考试视频组件
+    </description>
+    <license>MIT</license>
+
+		 <engines>
+        <engine name="cordova" version=">=6.0.0" />
+    </engines>
+
+	<platform name="android">
+		<source-file src="src/android/HbjyksPlugin.java"
+			target-dir="src/com/zsoftware/HbjyksPlugin"/>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="HbjyksPlugin">
+			<param name="android-package" value="com.zsoftware.hbjyks.HbjyksPlugin"/>
+		  </feature>
+		</config-file>
+
+
+		<!-- <config-file target="AndroidManifest.xml" parent="/manifest/application">
+	  	 <activity
+            android:name="com.zsoftware.independentwebview.IndependentWebViewActivity"
+						android:theme="@android:style/Theme.NoTitleBar"
+            android:process=":H5" ></activity>
+		</config-file> -->
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+				 <uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+
+		<framework src="src/android/hbjyks.gradle" custom="true" type="gradleReference"/>
+		<resource-file src="src/android/hbjyks.aar" target="libs/hbjyks.aar"/>
+		<resource-file src="src/android/videoplayer.aar" target="libs/videoplayer.aar"/>
+
+  </platform>
+</plugin>
