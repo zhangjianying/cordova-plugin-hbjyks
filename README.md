@@ -1,22 +1,13 @@
-# cordova-plugin-independent-webview
-
-​	独立进程的WebView窗体
-
-
+# cordova-plugin-hbjyks
 
 安装:
 
 ```java
-cordova plugin add https://github.com/zhangjianying/cordova-plugin-independent-webview.git
+cordova plugin add https://github.com/zhangjianying/cordova-plugin-hbjyks.git
 ```
-
-
-
-
 
 使用:
 
 ```javascript
-IndependentwebviewPlugin.open('http://m.baidu.com');
+HbjyksPlugin.open('http://m.baidu.com')
 ```
-
