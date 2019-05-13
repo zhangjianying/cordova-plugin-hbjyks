@@ -44,4 +44,14 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<resource-file src="src/android/videoplayer.aar" target="libs/videoplayer.aar"/>
 
   </platform>
+
+	<platform name="ios">
+  			<config-file target="config.xml" parent="/*">
+            <feature name="HbjyksPlugin">
+                <param name="ios-package" value="CDVHbjyksPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVHbjyksPlugin.h" />
+        <source-file src="src/ios/CDVHbjyksPlugin.m" />
+	</platform>
 </plugin>
